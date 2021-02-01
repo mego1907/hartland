@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600;700&family=Roboto+Slab:wght@400;500;700;900&display=swap');
 
 /* Global */
 * {
@@ -77,12 +77,13 @@ nav ul li a {
 	font-size: 16px;
 }
 
-nav ul li a.active {
+nav ul li.active a {
 	color: #14f30f;
 }
 
 nav ul li a:hover {
 	color: #14f30f;
+	text-decoration: none;
 }
 
 nav .nav-num {
@@ -101,7 +102,7 @@ nav .nav-num .whatsapp {
 }
 
 /* Responsive Navbar*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
 	nav .mobile-icon {
 		display: block;
 		position: absolute;
@@ -126,16 +127,89 @@ nav .nav-num .whatsapp {
 		display: flex;
 		flex-direction: column;
 	}
-	nav .nav-menu li:hover {
+	nav .nav-menu li:hover:not(:last-child),
+	nav .nav-menu li.active {
 		background-color: #14f30f;
-		color: #fff;
 		width: 100%;
 	}
 	nav .nav-menu li a {
 		font-size: 1.2rem;
+	}
+	nav .nav-menu li a:hover {
+		color: #fff;
+		text-decoration: none;
 	}
 	nav .nav-num {
 		margin: 40px 0;
 	}
 }
 /* End Navbar */
+
+/* Start Hero */
+.header {
+	background: url(../img/hero-bg.jpg);
+	height: 800px;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.header .wrapper {
+	width: 100%;
+	height: 800px;
+	background-image: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 14.06%,
+		rgba(92, 27, 27, 0.65) 59.08%,
+		#222222 92.75%
+	);
+	background-size: cover;
+	z-index: 2;
+	position: absolute;
+}
+
+.header .row {
+	position: absolute;
+	top: 35%;
+}
+
+.header h1 {
+	font-family: Roboto Mono;
+	font-size: 68px;
+	text-shadow: 6px 9px 12px #000000;
+	line-height: 90px;
+	color: #fff;
+}
+
+.header h1 span {
+	color: #14f30f;
+}
+
+.header .container button {
+	width: 20px;
+	height: 40px;
+	border: 2px solid #fff;
+	border-radius: 25px;
+	background: transparent;
+	outline: none;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+}
+
+.header .container button i {
+	color: #14f30f;
+}
+
+/* Responsive Hero */
+@media screen and (max-width: 767px) {
+	.header .row {
+		top: 10%;
+	}
+	.header h1 {
+		font-size: 50px;
+	}
+}
+/* End Hero */
