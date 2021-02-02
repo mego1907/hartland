@@ -11,3 +11,18 @@ toggle.addEventListener('click', () => {
 		NavMenu.style.left = '-100%';
 	}
 });
+/* End Navbar */
+
+/* Start carousel Glider */
+new Glider(document.querySelector('.glider'), {
+	slidesToShow: 1,
+	dots: '#dots',
+	draggable: true,
+	video: true,
+	arrows: {
+		prev: '.glider-prev',
+		next: '.glider-next',
+	},
+});
+
+/* End Carousel Glider */

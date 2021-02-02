@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600;700&family=Roboto+Slab:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@600;700&family=Roboto+Slab:wght@400;500;700;900&display=swap');
 
 /* Global */
 * {
@@ -9,6 +9,7 @@
 
 body {
 	font-family: 'Roboto Slab', serif;
+	background-color: #222222;
 }
 
 /* Start Navbar */
@@ -199,8 +200,25 @@ nav .nav-num .whatsapp {
 	left: 50%;
 }
 
-.header .container button i {
+header .container button span {
+	position: relative;
+}
+
+.header .container button span i {
 	color: #14f30f;
+	position: absolute;
+	bottom: 0;
+	left: 3.5px;
+	animation: down 0.5s ease-in-out infinite;
+}
+
+@keyframes down {
+	0% {
+		bottom: 0;
+	}
+	100% {
+		bottom: 15px;
+	}
 }
 
 /* Responsive Hero */
@@ -213,3 +231,106 @@ nav .nav-num .whatsapp {
 	}
 }
 /* End Hero */
+
+/* Start About */
+.about {
+	margin: 3rem 0;
+	height: 400px;
+	background-color: #222222;
+}
+
+.about .heading {
+	position: relative;
+	display: inline-block;
+}
+
+.about .heading::after {
+	content: '';
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+	position: absolute;
+	top: 16px;
+	right: -46px;
+}
+
+.about .heading::before {
+	content: '';
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+	position: absolute;
+	top: 16px;
+	left: -47px;
+	margin-bottom: 25px;
+}
+
+.about .heading h3 {
+	font-size: 30px;
+	display: flex;
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+.about .heading h3 p {
+	padding-left: 8px;
+	color: #14f30f;
+}
+
+.about .heading h3 p span {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+}
+
+.about .row p {
+	color: #fff;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.about .row .images {
+	display: flex;
+	position: relative;
+}
+
+.about .row .images img {
+	width: 300px;
+	height: 250px;
+	position: absolute;
+}
+
+.about .row .images img:nth-of-type(1) {
+	top: -60px;
+	right: 10px;
+}
+.about .row .images img:nth-of-type(2) {
+	top: -30px;
+	right: 40px;
+}
+.about .row .images img:nth-of-type(3) {
+	top: 0;
+	right: 70px;
+}
+
+/* End About */
+
+/* Start glider carousel */
+.glider-contain {
+	padding: 3rem 0;
+}
+
+.glider-contain .glider-prev {
+	outline: none;
+	position: absolute;
+	left: 50px;
+	top: 50%;
+	color: #fff;
+}
+.glider-contain .glider-next {
+	outline: none;
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	color: #fff;
+}
+/* End glider carousel */
