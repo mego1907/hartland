@@ -157,6 +157,7 @@ nav .nav-num .whatsapp {
 	background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
+	overflow: hidden;
 }
 
 .header .wrapper {
@@ -229,7 +230,7 @@ header .container button span {
 		top: 10%;
 	}
 	.header h1 {
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 /* End Hero */
@@ -239,6 +240,7 @@ header .container button span {
 	margin: 3rem 0;
 	height: 400px;
 	background-color: #222222;
+	overflow: hidden;
 }
 
 .about .heading {
@@ -314,11 +316,25 @@ header .container button span {
 	right: 70px;
 }
 
+/* Start Responsive About */
+@media screen and (max-width: 767px) {
+	.about {
+		height: 800px;
+	}
+	.about .row .images {
+		top: 50px;
+	}
+	.about .row .images img {
+		width: 100%;
+	}
+}
+
 /* End About */
 
 /* Start glider carousel */
 .glider-contain {
 	padding: 3rem 0;
+	overflow: hidden;
 }
 
 .glider-contain .glider-prev {
