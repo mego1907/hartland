@@ -30,6 +30,7 @@ nav .container {
 	height: 60px;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
 }
 
 nav .navlogo {
@@ -119,7 +120,7 @@ nav .nav-num .whatsapp {
 	nav .nav-menu {
 		padding-top: 50px;
 		width: 100%;
-		height: 90vh;
+		height: calc(90vh - 60px);
 		position: absolute;
 		top: 60px;
 		left: -100%;
@@ -143,7 +144,11 @@ nav .nav-num .whatsapp {
 		text-decoration: none;
 	}
 	nav .nav-num {
-		margin: 40px 0;
+		margin: 0; /* 
+		position: absolute;
+		top: -98px;
+		left: 50%;
+		transform: translateX(-50%); */
 	}
 }
 /* End Navbar */
