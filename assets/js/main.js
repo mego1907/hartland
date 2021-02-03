@@ -11,7 +11,11 @@ toggle.addEventListener('click', () => {
 		NavMenu.style.left = '-100%';
 	}
 });
+
 /* End Navbar */
+
+//Wow
+new WOW().init();
 
 /* Start carousel Glider */
 new Glider(document.querySelector('.glider'), {

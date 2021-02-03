@@ -150,7 +150,7 @@ nav .nav-num .whatsapp {
 
 /* Start Hero */
 .header {
-	background: url(../img/hero-bg.png);
+	background: url(../img/hero-bg.jpg);
 	height: 800px;
 	width: 100%;
 	background-size: cover;
@@ -624,20 +624,16 @@ header .container button span {
 /* End Location */
 
 /* Start Footer */
-.footer {
-	background: #333;
-	color: #fff;
-}
 
 .footer {
-	margin: 3rem 0 0;
+	margin-top: 3rem;
 	background-color: #333;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	color: #fff;
-	padding: 20px;
+	padding: 20px 0 0;
 }
 
 .footer .heading {
