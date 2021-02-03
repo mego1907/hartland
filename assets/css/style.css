@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@600;700&family=Roboto+Slab:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@400;900&family=Roboto+Mono:wght@600;700&family=Roboto+Slab:wght@400;500;700;900&display=swap');
 
 /* Global */
 * {
@@ -77,6 +77,7 @@ nav ul li a {
 	text-decoration: none;
 	color: #fff;
 	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
 }
 
 nav ul li.active a {
@@ -337,7 +338,8 @@ header .container button span {
 /* End glider carousel */
 
 /* Start Apartments */
-.apartments {
+.apartments,
+.villas {
 	margin: 3rem 0;
 	background-color: #222;
 	display: flex;
@@ -346,14 +348,16 @@ header .container button span {
 	align-items: center;
 }
 
-.apartments .heading h3 {
+.apartments .heading h3,
+.villas .heading h3 {
 	color: #fff;
 	font-size: 30px;
 	text-align: center;
 	position: relative;
 }
 
-.apartments .heading::after {
+.apartments .heading::after,
+.villas .heading::after {
 	content: '';
 	width: 80px;
 	height: 4px;
@@ -365,13 +369,15 @@ header .container button span {
 	transform: translate(-50%, -50%);
 }
 
-.apartments .category-list {
+.apartments .category-list,
+.villas .category-list {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.apartments .category-list ul {
+.apartments .category-list ul,
+.villas .category-list ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -379,7 +385,8 @@ header .container button span {
 	margin: 30px 0 20px;
 }
 
-.apartments .category-list ul li {
+.apartments .category-list ul li,
+.villas .category-list ul li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -391,16 +398,20 @@ header .container button span {
 	cursor: pointer;
 }
 
-.apartments .category-list ul li i {
+.apartments .category-list ul li i,
+.villas .category-list ul li i {
 	padding: 0 10px 0 0;
 }
 
-.apartments .category-list ul li p {
+.apartments .category-list ul li p,
+.villas .category-list ul li p {
 	margin-bottom: 0;
 }
 
 .apartments .category-list ul li:hover,
-.apartments .category-list ul li.active {
+.apartments .category-list ul li.active,
+.villas .category-list ul li:hover,
+.villas .category-list ul li.active {
 	background-color: #17c0cb;
 	border-color: #17c0cb;
 }
@@ -415,21 +426,18 @@ header .container button span {
 
 .category-items .item .img-container {
 	width: 300px;
-	height: 208px;
 }
 
-.category-items
-	.item
-	.img-container
-	.glider-contain
-	.glider
-	.img-container
-	img {
+.category-items .item .img-container .glider-contain .gliderG .img-content {
+	height: 250px;
+}
+
+.category-items .item .img-container .glider-contain .gliderG .img-content img {
 	width: 100%;
 	height: 100%;
 }
 
-.category-items .item .img-container .glider-contain .glider .img-container,
+.category-items .item .img-container .glider-contain .gliderG .img-content,
 .glider-contain {
 	padding: 0;
 }
@@ -481,6 +489,7 @@ header .container button span {
 .category-items .item .item-desc {
 	color: #fff;
 	margin-left: 20px;
+	width: 100%;
 }
 
 .category-items .item .item-desc h4 {
@@ -567,7 +576,165 @@ header .container button span {
 	outline: none;
 	background-color: #14f30f;
 	color: #fff;
-	padding: 4px 13px;
+	margin-right: 40px;
+	padding: 4px 30px;
+	border-radius: 20px;
 }
 
 /* End Apartments */
+
+/* Start Location */
+.locationSec {
+	margin: 3rem 0;
+	background-color: #222;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.locationSec .heading h3 {
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	position: relative;
+}
+
+.locationSec .heading::after {
+	content: '';
+	width: 80px;
+	height: 4px;
+	border-radius: 20px;
+	background-color: #14f30f;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.locationSec .img-wrapper {
+	margin: 50px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+/* End Location */
+
+/* Start Footer */
+.footer {
+	background: #333;
+	color: #fff;
+}
+
+.footer {
+	margin: 3rem 0 0;
+	background-color: #333;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	padding: 20px;
+}
+
+.footer .heading {
+	padding-bottom: 50px;
+}
+
+.footer .heading h3 {
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	position: relative;
+}
+
+.footer .heading::after {
+	content: '';
+	width: 80px;
+	height: 4px;
+	border-radius: 20px;
+	background-color: #14f30f;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.footer .phone-contact {
+	display: flex;
+}
+
+.footer .phone-contact .num-footer {
+	color: #fff;
+	font-size: 1.1rem;
+	text-decoration: none;
+}
+
+.footer .phone-contact .call {
+	border: none;
+	outline: none;
+	background-color: #14f30f;
+	color: #fff;
+	padding: 4px 30px;
+	border-radius: 20px;
+	margin: 0 30px;
+}
+
+.footer .phone-contact .whats-footer {
+	color: #14f30f;
+	font-size: 18px;
+}
+
+.footer .col-md-6 p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.2rem;
+	padding: 30px 0 10px;
+	line-height: 1.5;
+}
+
+.footer .contact-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer .col-md-6 h5 {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.footer .contact-form form {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer .contact-form input {
+	width: 100%;
+	padding: 6px 8px;
+	margin-bottom: 10px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	outline: none;
+}
+
+.footer .contact-form button {
+	padding: 5px 0;
+	background-color: #fff;
+	color: #333;
+	outline: none;
+	font-weight: bold;
+	border: none;
+	margin: 10px 0;
+	cursor: pointer;
+}
+/* End Footer */
